@@ -40,11 +40,11 @@
                 <form action="login.php" method="post">
                     <div class="form-group">
                         <label for="username">Enter Username</label>
-                        <input type="text" class="form-control" id="username" placeholder="Enter Username" autocomplete="off" name="username">
+                        <input type="text" class="form-control" id="username" placeholder="Enter username" autocomplete="off" name="username">
                     </div>
                     <div class="form-group">
                         <label for="password">Password</label>
-                        <input type="password" class="form-control" id="password" placeholder="Enter Password" autocomplete="off" name="password">
+                        <input type="password" class="form-control" id="password" placeholder="Enter password" autocomplete="off" name="password">
                     </div>
                     
                     <button type="submit" class="btn btn-dark w-100 my-3" name="login">Login</button>
