@@ -5,9 +5,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if (isset($_POST['login'])){
         $username = $_POST['username'];
-        $password = $_POST['password'];
+        $password = md5($_POST['password']);
 
-        $sql="select * from `data` where username='$username and password='$password' ";
+        $sql="Select * from `data` where username='$username' and password='$password' ";
 
         $result = mysqli_query($con, $sql);
         if ($result){
