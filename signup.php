@@ -8,17 +8,38 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
         $password=$_POST['password'];
         $cpassword=$_POST['cpassword'];
 
+        // $sql="insert into `data` (username,password) values('$username','$password')";
+        // $result=mysqli_query($con,$sql);
 
-        $sql="insert into 'data' (username,password) values('$username','$password')";
+        // if($result){
+        //     echo "Data inserted successfully";
+        // }else{
+        //     die(mysqli_error($con));
+        // }
 
+
+
+        $sql="select * from `data` where username='$username' ";
         $result=mysqli_query($con,$sql);
-
         if($result){
-            echo "Data inserted successfully";
-        }else{
-            die(mysqli_error($con));
+            $num=mysqli_num_rows($result);
+            if($num){
+                echo "User already exist";
+            }else{
+
+                if($password===$cpassword){
+                    $sql="insert into `data` (username,password) values('$username','$password')";
+                $result=mysqli_query($con,$sql);
+                if($result){
+                    echo "Sign Up Successfully";
+                }
+                }
+                else{
+                    echo "Password is not match";
+                }
+            }
         }
     }
-}
+}  
 
 ?>

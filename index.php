@@ -19,16 +19,16 @@
                 <h1 class="text-center">Sign Up</h1>
                 <form action="signup.php" method="post">
                     <div class="form-group">
-                        <label for="username">Enter Username</label>
-                        <input type="text" class="form-control" id="username" placeholder="Enter Username" autocomplete="off" name="username">
+                        <label for="username">Username</label>
+                        <input type="text" class="form-control" id="username" placeholder="Enter username" autocomplete="off" name="username">
                     </div>
                     <div class="form-group">
                         <label for="password">Password</label>
-                        <input type="password" class="form-control" id="password" placeholder="Enter Password" autocomplete="off" name="password">
+                        <input type="password" class="form-control" id="password" placeholder="Enter password" autocomplete="off" name="password">
                     </div>
                     <div class="form-group">
                         <label for="cpassword">Confirm Password</label>
-                        <input type="password" class="form-control" id="password" placeholder="Enter Confirm Password" autocomplete="off" name="cpassword">
+                        <input type="password" class="form-control" id="cpassword" placeholder="Enter confirm password" autocomplete="off" name="cpassword">
                     </div>
                     <button type="submit" class="btn btn-success w-100 my-3" name="signup">Sign up</button>
                 </form>
